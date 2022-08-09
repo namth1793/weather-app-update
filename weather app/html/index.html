@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="icon" href="/img/weather_logo.png">
+        <script src="https://kit.fontawesome.com/9783daa3ca.js" crossorigin="anonymous"></script>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+        </script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Splash&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    </head>
+
+    <body>
+        <div id="overlay"></div>
+        <div class="container-fluid">
+            <!-- nav-bar -->
+            <div class="row row_1">
+                <div class="information_bar col-7">
+                    <marquee id="info_bar" direction="left">I will show you the weather todayyyyyyyyyyyyyyyyyyyy
+                    </marquee>
+                </div>
+                <nav class="nav_bar col-5">
+                    <ul class="nav" id="myTopnav">
+                        <li class="nav_item"><a href="#footer" class="nav-link navbar-text">Contact</a></li>
+                        <li class="nav_item"><a href="#about" class="nav-link navbar-text">About</a></li>
+                        <li class="nav_item" style="cursor: pointer;"><a onclick="sidebarOpen()"
+                                class="nav-link navbar-text">Menu</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="w3-sidebar w3-bar-block w3-animate-left" id="mySidebar">
+                <div class="sidebar">
+                    <a href="/html/weathertoday.html" id="sidebar_item" class="w3-bar-item w3-light">Weather Today</a>
+                    <a href="/html/login.html" id="sidebar_item" class="w3-bar-item">Login <em
+                            class="w3-light fa-solid fa-arrow-right-to-bracket"></em></a>
+                </div>
+                <div class="icon_link">
+                    <a id="icon" href="https://t.me/nth1793" target="_blank" title="telegram"><em
+                            class="fa-brands fa-telegram"></em></a>
+                    <a id="icon" href="https://www.instagram.com/freedomm_17" target="_blank" title="instagram"><em
+                            class="fa-brands fa-instagram"></em></a>
+                    <a id="icon" href="https://dribbble.com/namth1793" target="_blank" title="dribble"><em
+                            class="fa-brands fa-dribbble"></em></a>
+                </div>
+            </div>
+            <!-- header_banner -->
+            <div class="header_banner">
+                <div class="header_img">
+                    <img src="/img/banner_background.png" alt="header_img">
+                </div>
+                <div class="header_info">
+                    <h1 class="first-gsap">Welcome to Weather App</h1>
+                    <button class="btn btn-outline-dark text-light btn-date" type="button">Today is:</button><br><br>
+                    <div class="border-dark text-light" id="date"></div>
+                </div>
+            </div>
+            <!-- about -->
+            <div id="about">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="about_heading" class="text-center">About</h1>
+                    </div>
+                </div>
+                <div style="height: 70px;" class="row"></div>
+                <div class="row flex">
+                    <div class="col-1"></div>
+                    <div class="about_content col-6 cloudy-text">
+                        <h3>Cloudy</h3>
+                        <p>In meteorology, a cloud is an aerosol consisting of a visible mass of miniature liquid
+                            droplets, frozen crystals, or other particles suspended in the atmosphere of a planetary
+                            body or similar space. Water or various other chemicals
+                            may compose the droplets and crystals. On Earth, clouds are formed as a result of saturation
+                            of the air when it is cooled to its dew point, or when it gains sufficient moisture (usually
+                            in the form of water vapor) from an adjacent
+                            source to raise the dew point to the ambient temperature. They are seen in the Earth's
+                            homosphere, which includes the troposphere, stratosphere, and mesosphere.</p>
+                    </div>
+                    <div class="col-5">
+                        <img id="about_img" class="cloudy" src="/img/about_img_1.png" alt="cloudy">
+                    </div>
+                </div>
+                <div style="height: 70px;" class="row"></div>
+                <div class="row flex-2">
+                    <div class="col-5">
+                        <img id="about_img" class="rainy" src="/img/about_img_2.png" alt="rainy">
+                    </div>
+                    <div class="about_content col-6 rainy-text">
+                        <h3>Rainy</h3>
+                        <p>
+                            Rain is liquid water in the form of droplets that have condensed from atmospheric water
+                            vapor and then become heavy enough to fall under gravity. Rain is a major component of the
+                            water cycle and is responsible for depositing most of the fresh water on
+                            the Earth. It provides suitable conditions for many types of ecosystems, as well as water
+                            for hydroelectric power plants and crop irrigation.The major cause of rain production is
+                            moisture moving along three-dimensional zones of
+                            temperature and moisture contrasts known as weather fronts.
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div style="height: 70px;" class="row"></div>
+                <div class="row flex">
+                    <div class="col-1"></div>
+                    <div class="about_content col-6 snowy-text">
+                        <h3>Snowy</h3>
+                        <p>
+                            Snow comprises individual ice crystals that grow while suspended in the atmosphere—usually
+                            within clouds—and then fall, accumulating on the ground where they undergo further
+                            changes.[2] It consists of frozen crystalline water throughout its life cycle,
+                            starting when, under suitable conditions, the ice crystals form in the atmosphere, increase
+                            to millimeter size, precipitate and accumulate on surfaces, then metamorphose in place, and
+                            ultimately melt, slide or sublimate away.Major
+                            snow-prone areas include the polar regions, the northernmost half of the Northern Hemisphere
+                            and mountainous regions worldwide with sufficient moisture and cold temperatures. In the
+                            Southern Hemisphere, snow is confined primarily
+                            to mountainous areas, apart from Antarctica.
+                        </p>
+                    </div>
+                    <div class="col-5">
+                        <img id="about_img" class="snowy" src="/img/about_img_3.png" alt="snowy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer" class="text-light">
+            <img id="footer_logo" src="/img/weather_logo.png" alt="logo">
+            <div class="contact">
+                <p>Email:
+                    <a href="mailto:namtranhoai179.3@gmail.com">namtranhoai179.3@gmail.com</a>
+                </p>
+                <p>Facebook:
+                    <a target="_blank" href="https://www.facebook.com/namth1793">https://www.facebook.com/namth1793</a>
+                </p>
+            </div>
+            <h1 id="contact_h1">Contact</h1>
+        </div>
+        <p id="copyright"> &#169 WeatherApp.com copyright</p>
+        <button class="back_to_top" id="topBtn" title="go to top" onclick="topFunction()"><em
+                class="fa-solid fa-circle-chevron-up"></em></button>
+        <script src="/javascript/index.js "></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+        <script src="/javascript/gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,65 @@
+body {
+    background-image: url(/img/banner_background.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+
+h1 {
+    font-family: 'The Nautigal', cursive;
+    font-size: 80px;
+}
+.return a {
+    font-family: 'The Nautigal', cursive;
+    font-size: 40px;
+}
+
+.return {
+    margin-top: 10px;
+}
+
+.form_login {
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.form_submit{
+    display: flex;
+}
+.form_submit a {
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    background-color: green;
+    padding: 5px 30px;
+    margin: auto;
+    transition: all .5s;
+}
+.form_submit a:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.tick{
+    display: flex;
+    justify-content: space-between;
+}
+.tick-text{
+    margin-left: -10em;
+}
+@media (max-width:600px){
+    .form_login{
+        width: 90%;
+        margin-top: 20%;
+    }
+    .tick-text{
+        font-size: 13px;
+        margin-left: -3em;
+    }
+    .box{
+        padding-top: 20px;
+    }
+}
